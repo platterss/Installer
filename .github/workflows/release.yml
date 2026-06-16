@@ -202,7 +202,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ github.ref_name }}
+          tag_name: ${{ inputs.version_tag }}
+          name: ${{ inputs.version_tag }}
           prerelease: false
           draft: false
           files: |
