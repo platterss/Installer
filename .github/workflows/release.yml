@@ -3,6 +3,11 @@
 name: Release
 on:
   workflow_dispatch:
+    inputs:
+      version_tag:
+        description: "Tag to release (ex. v1.0.0)"
+        required: true
+        type: string
 
 env:
   FORCE_COLOR: true
